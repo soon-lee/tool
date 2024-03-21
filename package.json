@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pixi.js": "^8.0.2",
     "solid-js": "^1.8.15"
   },
   "devDependencies": {
