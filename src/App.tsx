@@ -9,9 +9,11 @@ function App () {
 
     return (
         <MainLayout
-            menu={<Menu menus={[{name: '1'}]}/>}
+            menu={<Menu menus={
+                [{name: '1'},{name: 'sfs'},{name: '独立客观记录'}]
+            }/>}
             view={<View />}
-            todo={<Todo />}
+            todo={<Todo  activeTab={0} tabs={[{name:'1',content:'fjslkgdfjgl'},{name:'2',content:'2234236t46'}]}/>}
             form={<Form />}/>
     )
 }

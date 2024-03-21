@@ -8,11 +8,11 @@ interface MainLayout{
 }
 export const MainLayout = (props:MainLayout) =>{
     return (
-        <div class="layout">
-            <div class="menu">{props.menu}</div>
-            <div class="view">{props.view}</div>
-            <div class="todo">{props.todo}</div>
-            <div class="form">{props.form}</div>
+        <div class="od-layout">
+            <div class="od-menu">{props.menu}</div>
+            <div class="od-view">{props.view}</div>
+            <div class="od-todo">{props.todo}</div>
+            <div class="od-form">{props.form}</div>
         </div>
     )
 }

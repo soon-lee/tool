@@ -10,13 +10,13 @@ interface MenuProps{
 }
 export const Menu = (props:MenuProps)=>{
     return (
-        <div>
-            <ul>
+        <div class="menu-wrapper">
+            <div class="menu-list">
                 <For each={props.menus}>
-                    {item => (<li>{item.name}</li>)}
+                    {item => (<div>{item.name}</div>)}
                 </For>
-            </ul>
-            <div>
+            </div>
+            <div class="power-by">
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} class="logo" alt="Vite logo"/>
                 </a>
