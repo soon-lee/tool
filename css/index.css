@@ -1,0 +1,86 @@
+html, body, door-layout {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--bg-color-body);
+}
+
+:root {
+    /* 基本颜色 */
+    --color-primary: #1a1a1a;
+    --color-secondary: #666;
+    --color-tertiary: #999;
+    --color-success: #3CB371;
+    --color-warning: #FDD835;
+    --color-danger: #D32F2F;
+    --color-info: #1E88E5;
+
+    /* 背景与填充 */
+    --bg-color-body: #ffffff;
+    --bg-color-content: #f5f5f5;
+    --bg-color-card: #ffffff;
+    --bg-color-modal: #ffffff;
+    --bg-color-overlay: rgba(0, 0, 0, 0.5);
+
+    /* 边框与分割线 */
+    --border-color-default: #ddd;
+    --border-color-light: #eee;
+    --border-color-separator: rgba(0, 0, 0, 0.1);
+
+    /* 文本 */
+    --text-color-primary: #333;
+    --text-color-secondary: #666;
+    --text-color-tertiary: #999;
+    --text-color-link: var(--color-primary);
+    --text-color-link-hover: #000; /* 直接定义一个较深的颜色作为链接hover状态 */
+
+    /* 阴影 */
+    --shadow-small: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+    /* 图标颜色 */
+    --icon-color-default: #666;
+    --icon-color-hover: #333;
+}
+
+:root[data-theme="dark"] {
+    /* 基本颜色 */
+    --color-primary: #ffffff;
+    --color-secondary: #aaa;
+    --color-tertiary: #ccc;
+    --color-success: #4CAF50;
+    --color-warning: #FFC107;
+    --color-danger: #FF5722;
+    --color-info: #2196F3;
+
+    /* 背景与填充 */
+    --bg-color-body: #2e2e2e;
+    --bg-color-content: #333;
+    --bg-color-card: #333;
+    --bg-color-modal: #333;
+    --bg-color-overlay: rgba(255, 255, 255, 0.5);
+
+    /* 边框与分割线 */
+    --border-color-default: #555;
+    --border-color-light: #666;
+    --border-color-separator: rgba(255, 255, 255, 0.1);
+
+    /* 文本 */
+    --text-color-primary: #f5f5f5;
+    --text-color-secondary: #aaa;
+    --text-color-tertiary: #ccc;
+    --text-color-link: var(--color-primary);
+    --text-color-link-hover: #f0f0f0; /* 直接定义一个较浅的颜色作为链接hover状态 */
+
+    /* 阴影 */
+    --shadow-small: 0 1px 2px rgba(255, 255, 255, 0.1);
+    --shadow-medium: 0 3px 6px rgba(255, 255, 255, 0.1);
+    --shadow-large: 0 6px 12px rgba(255, 255, 255, 0.1);
+
+    /* 图标颜色 */
+    --icon-color-default: #aaa;
+    --icon-color-hover: #fff;
+}

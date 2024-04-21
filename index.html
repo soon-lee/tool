@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="utils/io.js"></script>
+    <script type="text/javascript" src="utils/dom.js"></script>
+    <script type="text/javascript" src="utils/init.js"></script>
+    <script type="text/javascript" src="containers/door.js"></script>
+    <script type="text/javascript" src="components/home.js"></script>
+    <script type="text/javascript" src="components/search.js"></script>
+    <script type="text/javascript" src="components/locale.js"></script>
+    <script type="text/javascript" src="components/theme.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<door-layout>
+    <site-home slot="header"></site-home>
+    <site-search slot="header"></site-search>
+    <site-locale slot="header"></site-locale>
+    <site-theme slot="header"></site-theme>
+    <div slot="catalog">catalog</div>
+    <div slot="content">content</div>
+    <div slot="outline">outline</div>
+    <div slot="footer">footer</div>
+</door-layout>
+</body>
+</html>

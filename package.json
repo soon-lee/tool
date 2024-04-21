@@ -1,0 +1,12 @@
+{
+  "name": "jsdoc-material-theme",
+  "version": "1.0.0",
+  "description": "jsDoc主题模板，支持多语言",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soon Lee",
+  "license": "MIT"
+}
