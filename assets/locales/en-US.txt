@@ -1,0 +1,23 @@
+# UI Text
+ui.title.text = Zhang San's Fruit and Vegetable Store
+ui.tool.file.text = File
+ui.tool.file.export.text = Export
+ui.tool.locale.text = Switch Language
+ui.tool.locale.zh-CN = Simplified Chinese (China)
+ui.tool.locale.en-US = American English
+ui.tool.theme.text = Switch Theme
+ui.tool.theme.light = Light Theme
+ui.tool.theme.dark = Dark Theme
+ui.container.status.error = Failed
+ui.container.status.none = No Status
+ui.container.status.success = Success
+ui.container.button.submit = Submit
+ui.container.fruit.text = Fruit
+ui.container.fruit.placeholder = Enter fruit
+ui.container.fruit.error = This fruit does not exist
+ui.container.fruit.success = Price for this fruit has been calculated
+ui.container.vegetable.text = Vegetable
+ui.container.vegetable.placeholder = Enter vegetable
+ui.container.vegetable.error = This vegetable does not exist
+ui.container.vegetable.success = Price for this vegetable has been calculated
+# Log Text

@@ -1,0 +1,23 @@
+# UI文本
+ui.title.text = 张三蔬菜水果店
+ui.tool.file.text = 文件
+ui.tool.file.export.text = 导出
+ui.tool.locale.text = 切换语言
+ui.tool.locale.zh-CN = 简体中文（中国大陆）
+ui.tool.locale.en-US = 美式英语
+ui.tool.theme.text = 切换主题
+ui.tool.theme.light = 明亮主题
+ui.tool.theme.dark = 暗黑主题
+ui.container.status.error = 失败
+ui.container.status.none = 无状态
+ui.container.status.success = 成功
+ui.container.button.submit = 提交
+ui.container.fruit.text = 水果
+ui.container.fruit.placeholder = 请输入水果
+ui.container.fruit.error = 此水果种类不存在
+ui.container.fruit.success = 已计算出此水果价格
+ui.container.vegetable.text = 蔬菜
+ui.container.vegetable.placeholder = 请输入蔬菜
+ui.container.vegetable.error = 此蔬菜种类不存在
+ui.container.vegetable.success = 已计算出此蔬菜价格
+# Log文本
