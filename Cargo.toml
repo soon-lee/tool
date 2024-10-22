@@ -4,3 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+playwright = "0.0.20"
+qiniu-sdk = "0.2.4"
+reqwest = "0.12.8"
+scraper = "0.20.0"
+sqlx = "0.8.2"
+tokio = "1.40.0"
