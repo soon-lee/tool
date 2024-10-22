@@ -1,12 +1,19 @@
 [package]
+edition = "2021"
 name = "novel"
 version = "0.1.0"
-edition = "2021"
 
 [dependencies]
 playwright = "0.0.20"
-qiniu-sdk = "0.2.4"
-reqwest = "0.12.8"
+qiniu-sdk = {version = "0.2.4", features = ["upload", "async", "reqwest"]}
+reqwest = {version = "0.12.8", features = ["json"]}
 scraper = "0.20.0"
-sqlx = "0.8.2"
+serde_json = "1.0.132"
+sqlx = {version = "0.8.2", features = ["runtime-tokio-rustls", "mysql"]}
 tokio = "1.40.0"
+tokio-util = {version = "0.7.12", features = ["compat"]}
+uuid = {version = "1.11.0", features = [
+  "v4",
+  "fast-rng",
+  "macro-diagnostics",
+]}

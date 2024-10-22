@@ -1,3 +1,7 @@
+mod db;
+mod oss;
+mod spider;
 fn main() {
-    println!("Hello, world!");
+    let kind = spider::NovelCategory::from("玄幻");
+    println!("{}", kind.to_string());
 }
