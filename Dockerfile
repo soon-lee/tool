@@ -5,13 +5,10 @@ FROM rust:latest as builder
 WORKDIR /usr/src/novel
 
 # 复制 Cargo.toml 和 Cargo.lock 文件
-COPY ./
+COPY . ./
 
 # 创建目标目录
 RUN mkdir /usr/src/novel/target
-
-# 复制源代码
-COPY src ./src
 
 # 构建项目
 RUN cargo build --release
