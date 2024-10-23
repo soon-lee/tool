@@ -5,7 +5,7 @@ FROM rust:latest as builder
 WORKDIR /usr/src/novel
 
 # 复制 Cargo.toml 和 Cargo.lock 文件
-COPY Cargo.toml Cargo.lock ./
+COPY ./
 
 # 创建目标目录
 RUN mkdir /usr/src/novel/target
