@@ -63,11 +63,11 @@ impl DbClient {
     ) -> Result<Self, String> {
         let connection_options = MySqlConnectOptions::new()
             .host(host)
+            .port(3306)
             .username(username)
             .password(password)
             .database(database);
         let pool = MySqlPoolOptions::new()
-            .max_connections(5)
             .connect_with(connection_options)
             .await
             .map_err(|err| format!("连接数据库失败：{:?}", err))?;

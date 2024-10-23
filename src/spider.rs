@@ -3,7 +3,10 @@ use scraper::{ElementRef, Html, Selector};
 use serde_json::Value;
 use uuid::Uuid;
 
-use crate::{db::{DataNovel, DataNovelChapter, DbClient}, oss::OssClient};
+use crate::{
+    db::{DataNovel, DataNovelChapter, DbClient},
+    oss::OssClient,
+};
 
 pub enum NovelCategory {
     Fantasy(i32),
@@ -165,7 +168,7 @@ impl NovelSpider {
     pub fn novel_list(&self, category: String) -> NovelList {
         NovelList::new(category)
     }
-    pub async fn run(&self, db: &DbClient,oss:&OssClient) -> Result<(), String> {
+    pub async fn run(&self, db: &DbClient, oss: &OssClient, origin: &String) -> Result<(), String> {
         let mut novels_list = Vec::<NovelList>::new();
         novels_list.push(self.novel_list(String::from("玄幻")));
         novels_list.push(self.novel_list(String::from("武侠")));
@@ -197,16 +200,19 @@ impl NovelSpider {
                             let table_document = Html::parse_document(&table_text);
                             let (state, chapter_list) =
                                 novel_table.table(&table_document.root_element())?;
-                            let parts = &cover.split(".").map(|s|String::from(s)).collect::<Vec<_>>();
+                            let parts = &cover
+                                .split(".")
+                                .map(|s| String::from(s))
+                                .collect::<Vec<_>>();
                             let extension = parts.last().ok_or(String::from("不是图片"))?;
-                            let object_name = format!("novel/cover/{}.{}", novel_id,extension);
+                            let object_name = format!("novel/cover/{}.{}", novel_id, extension);
                             oss.post_from_url(&cover, &object_name).await?;
                             let data_novel = DataNovel::new(
                                 novel_id.clone(),
                                 title,
                                 author,
                                 brief,
-                                format!("https://pic.soonlee.site/{}",object_name),
+                                format!("http://{}/{}", origin, object_name),
                                 state,
                                 novels.category.clone(),
                             );
@@ -242,7 +248,10 @@ impl NovelSpider {
                         break;
                     }
                 }
+                page += 1;
+                break;
             }
+            break;
         }
         Ok(())
     }
